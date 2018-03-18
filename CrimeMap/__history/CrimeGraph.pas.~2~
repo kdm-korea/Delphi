@@ -1,0 +1,25 @@
+unit CrimeGraph;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, VCLTee.TeeData;
+
+type
+  TCiGraph = class(TForm)
+    ChartDataSet1: TChartDataSet;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  CiGraph: TCiGraph;
+
+implementation
+
+{$R *.dfm}
+
+end.

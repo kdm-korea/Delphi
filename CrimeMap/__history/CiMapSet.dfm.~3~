@@ -1,0 +1,104 @@
+object FMapSet: TFMapSet
+  Left = 0
+  Top = 0
+  Caption = 'Google Map Setting'
+  ClientHeight = 108
+  ClientWidth = 288
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 8
+    Width = 273
+    Height = 95
+    Caption = 'Setting'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    object Label3: TLabel
+      Left = 16
+      Top = 19
+      Width = 52
+      Height = 17
+      Caption = #9633' Traffic'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Microsoft JhengHei UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 16
+      Top = 65
+      Width = 52
+      Height = 17
+      Caption = #9633' Traffic'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Microsoft JhengHei UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label1: TLabel
+      Left = 16
+      Top = 42
+      Width = 68
+      Height = 17
+      Caption = #9633' Bicycling'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Microsoft JhengHei UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Panel1: TPanel
+      Left = 103
+      Top = 19
+      Width = 159
+      Height = 20
+      TabOrder = 0
+      object RadioButton1: TRadioButton
+        Left = 9
+        Top = 1
+        Width = 74
+        Height = 17
+        Caption = 'On'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Microsoft JhengHei UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 0
+      end
+      object RadioButton2: TRadioButton
+        Left = 89
+        Top = 1
+        Width = 81
+        Height = 17
+        Caption = 'Off'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Microsoft JhengHei UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 1
+      end
+    end
+  end
+end

@@ -1,0 +1,407 @@
+unit Main;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.Menus,
+  Vcl.ToolWin, Vcl.ExtCtrls, Vcl.Mask, Vcl.DBCtrls, Vcl.Buttons,
+  IWVCLBaseControl, IWBaseControl, IWBaseHTMLControl, IWControl, IWCompRectangle,
+  System.Rtti, System.Bindings.Outputs, Vcl.Bind.Editors, Data.Bind.EngExt,
+  Vcl.Bind.DBEngExt, Data.Bind.Components, Data.Bind.DBScope, Data.DB,
+  Data.Win.ADODB, System.ImageList, Vcl.ImgList, VclTee.TeeGDIPlus, Vcl.Grids,
+  VCLTee.TeEngine, VCLTee.DBChart, VCLTee.TeeDBCrossTab, VCLTee.Series,
+  VCLTee.TeeProcs, VCLTee.Chart, Vcl.DBGrids, Data.FMTBcd, Data.SqlExpr,
+  Vcl.Imaging.pngimage;
+
+type
+  TFMain = class(TForm)
+    TabControl2: TTabControl;
+    GroupBox1: TGroupBox;
+    PageControl1: TPageControl;
+    MainMenu1: TMainMenu;
+    Menu1: TMenuItem;
+    OptionO1: TMenuItem;
+    InformationI1: TMenuItem;
+    Development1: TMenuItem;
+    ExitX1: TMenuItem;
+    ProgramIntro1: TMenuItem;
+    DataBaseD1: TMenuItem;
+    GroupBox2: TGroupBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label9: TLabel;
+    Label8: TLabel;
+    Label7: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    DBNameK: TDBEdit;
+    DBNameE: TDBEdit;
+    DBJumin1: TDBEdit;
+    DBEdit4: TDBEdit;
+    Label17: TLabel;
+    DBCoEmail: TDBEdit;
+    Label18: TLabel;
+    DBCoSite: TDBEdit;
+    ComSite: TComboBox;
+    DBCoNum: TDBEdit;
+    DBCoPw: TDBEdit;
+    DBCoDept: TDBEdit;
+    DBCoRank: TDBEdit;
+    DBCoJoin: TDBEdit;
+    Compart: TComboBox;
+    ComRank: TComboBox;
+    DBCpNum: TDBEdit;
+    DBHpNum: TDBEdit;
+    DBCoAddr: TDBEdit;
+    DBCoX: TDBEdit;
+    DBCoY: TDBEdit;
+    DateTimePicker1: TDateTimePicker;
+    GroupBox3: TGroupBox;
+    AdName: TLabel;
+    ADCoNum: TLabel;
+    ADRank: TLabel;
+    AdStatus: TLabel;
+    AdStatusCb: TComboBox;
+    Button2: TButton;
+    BitBtn1: TBitBtn;
+    DBNavigator1: TDBNavigator;
+    BitBtn2: TBitBtn;
+    BitBtn3: TBitBtn;
+    BitBtn4: TBitBtn;
+    BitBtn5: TBitBtn;
+    Label23: TLabel;
+    SortSKind: TComboBox;
+    Button3: TButton;
+    Label24: TLabel;
+    ComboBox7: TComboBox;
+    Button4: TButton;
+    Edit1: TEdit;
+    SortMKind: TComboBox;
+    MapSetting1: TMenuItem;
+    AdditionA1: TMenuItem;
+    GoogleMap1: TMenuItem;
+    DataList1: TMenuItem;
+    Grap1: TMenuItem;
+    ProgramSetting1: TMenuItem;
+    able1: TMenuItem;
+    Department1: TMenuItem;
+    Rank1: TMenuItem;
+    ADOTable1: TADOTable;
+    DataSource1: TDataSource;
+    GridDBSheet: TTabSheet;
+    DBGrid1: TDBGrid;
+    DBImage1: TDBImage;
+    QryMyInfo: TADOQuery;
+    Label19: TLabel;
+    DBComboBox2: TDBComboBox;
+    ComboBox1: TComboBox;
+    GroupBox4: TGroupBox;
+    DBChart1: TDBChart;
+    Series1: TPieSeries;
+    DBCrossTabSource1: TDBCrossTabSource;
+    GroupBox5: TGroupBox;
+    GroupBox6: TGroupBox;
+    DBChart2: TDBChart;
+    Series2: THorizBarSeries;
+    DBCrossTabSource2: TDBCrossTabSource;
+    DBChart3: TDBChart;
+    DBCrossTabSource3: TDBCrossTabSource;
+    Series3: TBarSeries;
+    DBImage2: TDBImage;
+    DataSource2: TDataSource;
+    procedure GoogleMap1Click(Sender: TObject);
+    procedure ProgramIntro1Click(Sender: TObject);
+    procedure MapSetting1Click(Sender: TObject);
+    procedure Department1Click(Sender: TObject);
+    procedure Rank1Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button2Click(Sender: TObject);
+    procedure DateTimePicker1Change(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure BitBtn3Click(Sender: TObject);
+    procedure BitBtn4Click(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
+    procedure BitBtn5Click(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
+    procedure ComSiteChange(Sender: TObject);
+    procedure ComRankChange(Sender: TObject);
+    procedure ComboBox7Change(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure Development1Click(Sender: TObject);
+    procedure Grap1Click(Sender: TObject);
+    procedure CompartChange(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FMain: TFMain;
+
+implementation
+
+{$R *.dfm}
+
+uses CiGraph, CiMap, CiLogin, CiProgramInfo, CiMapSet, CiDepartment, CiRank,
+Unit3;
+
+
+
+
+
+procedure TFMain.BitBtn1Click(Sender: TObject);
+begin
+  QryMyInfo.Insert;
+  DateTimePicker1.Enabled := True;
+  Compart.Enabled := True;
+  ComSite.Enabled := True;
+  ComRank.Enabled := True;
+end;
+
+procedure TFMain.BitBtn2Click(Sender: TObject);
+begin
+  DateTimePicker1.Enabled := False;
+    Compart.Enabled := False;
+  ComSite.Enabled := False;
+  ComRank.Enabled := False;
+  QryMyInfo.Post;
+end;
+
+procedure TFMain.BitBtn3Click(Sender: TObject);
+begin
+  QryMyInfo.Refresh;
+  DateTimePicker1.Enabled := False;
+  Compart.Enabled := false;
+  ComSite.Enabled := False;
+  ComRank.Enabled := False;
+
+end;
+
+procedure TFMain.BitBtn4Click(Sender: TObject);
+begin
+  DateTimePicker1.Enabled := False;
+  ComSite.Enabled := False;
+    Compart.Enabled := false;
+  ComRank.Enabled := False;
+  QryMyInfo.Close;
+end;
+
+procedure TFMain.BitBtn5Click(Sender: TObject);
+begin
+  DateTimePicker1.Enabled := False;
+  ComSite.Enabled := False;
+  ComRank.Enabled := False;
+  Compart.Enabled := false;
+  QryMyInfo.Delete;
+end;
+
+procedure TFMain.Button2Click(Sender: TObject);
+begin
+  try
+    with QryMyInfo do
+    begin
+      close;
+      SQL.Clear;
+      SQL.Add('Select * From DBPEPERSONINFO Where PW = ''' + InputBox('Change Status',#31 + 'PassWord : ','')+'''' + 'and EM_NO = ''' + Copy(ADCoNum.Caption,9,11) + ''''+';');
+      Open;
+      if(RecordCount = 1)then
+      begin
+        close;
+        SQL.Clear;
+        SQL.Add('Update DBPEPERSONINFO Set State = '''  +AdStatusCb.Text +''''+ ' Where EM_NO = ''' + FLogin.CoNum.Text + ''''+';');
+        ExecSQL;
+        AdStatus.Caption := 'Status : '+AdStatusCb.Text;
+      end
+      else
+        MessageDlg('유효하지 않은 정보입니다.', mtError,[mbOk], 0);
+    end;
+  except
+
+  end;
+{  if(QryMyInfo.RecordCount = 1)then
+  begin
+    AdStatus.Caption := 'Status : '+AdStatusCb.Text;
+  end;
+  AdStatusCb.Text
+}
+end;
+
+procedure TFMain.Button3Click(Sender: TObject);
+var
+  Frtval, Sndval: string;
+begin
+  if(SortMKind.Text = 'Department')then
+    Frtval := 'DEPT'
+  else if(SortMKind.Text = 'PersonalNum')then
+    Frtval := 'EM_NO'
+  else if(SortMKind.Text = 'Rank') then
+    Frtval := 'RANK'
+  else
+    Frtval := null;
+
+  if(SortSKind.Text = 'Ascending')then
+    Sndval := 'Asc'
+  else if(SortSKind.Text = 'Descending')then
+    Sndval := 'Desc'
+  else
+    Sndval := null;
+  if((Frtval <> Null) and (Sndval <> null))then
+  begin
+    with QryMyInfo do
+    begin
+      Close;
+      SQL.Clear;                       {+ Sndval+}
+      SQL.Add('Select * From DBPePersonInfo Order by '+frtval+' '+ Sndval+';');
+      ExecSQL;
+      QryMyInfo.Active := False;
+      QryMyInfo.Active := True;
+      DBGrid1.Refresh;
+      MessageDlg('완료되었습니다.', mtInformation,[mbOk], 0);
+    end;
+  end
+  else
+    MessageDlg('유효하지 않은 정보입니다.', mtError,[mbOk], 0);
+end;
+
+procedure TFMain.Button4Click(Sender: TObject);
+begin
+  if(ComboBox7.Text <> null) then
+  begin
+    with QryMyInfo do
+    begin
+        close;
+        SQL.Clear;
+        if(ComboBox7.Text = 'Department')then
+        begin
+          sql.Add('Select * from DBPePersonInfo where Dept = ''' + ComboBox1.Text+''''+'and Name_ko = +'''+ Edit1.Text+''''+';');
+          if(Edit1.Text = '*')then
+          begin
+            sql.Clear;
+            sql.Add('Select * from DBPePersonInfo where Dept = ''' + ComboBox1.Text+''''+';');
+          end;
+        end
+        else if(ComboBox7.Text = 'Status') then
+        begin
+          sql.Add('Select * from DBPePersonInfo where State = ''' + ComboBox1.Text+''''+'and Name_ko = +'''+ Edit1.Text+''''+';');
+          if(Edit1.Text = '*')then
+          begin
+            sql.Clear;
+            sql.Add('Select * from DBPePersonInfo where State = ''' + ComboBox1.Text+''''+';');
+          end;
+        end;
+        Open;
+        QryMyInfo.Active := False;
+        QryMyInfo.Active := True;
+        DBGrid1.Refresh;
+    end;
+  end;
+end;
+
+procedure TFMain.ComboBox7Change(Sender: TObject);
+begin
+  if(ComboBox7.Text = 'Department')then
+  begin
+    with ComboBox1.Items do
+    begin
+      Clear;
+      add('인사부');
+      add('회계부');
+      add('물류부');
+      add('생산부');
+    end;
+  end
+  else if(ComboBox7.Text = 'Status')then
+  begin
+    with ComboBox1.Items do
+    begin
+      Clear;
+      Add('업무중');
+      Add('자리비움');
+      Add('비활성화');
+    end;
+  end;
+end;
+
+procedure TFMain.CompartChange(Sender: TObject);
+begin
+  DBCoDept.Text := Compart.Text;
+end;
+
+procedure TFMain.ComRankChange(Sender: TObject);
+begin
+  DBCoRank.Text := ComRank.Text;
+end;
+
+procedure TFMain.ComSiteChange(Sender: TObject);
+begin
+  DBCoSite.Text := ComSite.Text;
+end;
+
+procedure TFMain.DateTimePicker1Change(Sender: TObject);
+begin
+  DBCoJoin.Text := DateToStr(DateTimePicker1.Date);
+end;
+
+procedure TFMain.Department1Click(Sender: TObject);
+begin
+  FDepartment.Show;
+end;
+
+procedure TFMain.Development1Click(Sender: TObject);
+begin
+  Unit3.Form3.Show;
+end;
+
+procedure TFMain.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  FLogin.Close;
+  with QryMyInfo do
+  begin
+    close;
+    SQL.Clear;
+    SQL.Add('Update DBPEPERSONINFO Set State = '''  +'비활성화' +''''+ ' Where EM_NO = ''' + FLogin.CoNum.Text + ''''+';');
+    ExecSQL;
+  end;
+end;
+
+procedure TFMain.GoogleMap1Click(Sender: TObject);
+begin
+  FMap.Show;
+
+end;
+
+procedure TFMain.Grap1Click(Sender: TObject);
+begin
+  FGraph.Show;
+end;
+
+procedure TFMain.MapSetting1Click(Sender: TObject);
+begin
+  FMapSet.Show;
+end;
+
+
+
+procedure TFMain.ProgramIntro1Click(Sender: TObject);
+begin
+  FProgramInfo.Show;
+end;
+
+procedure TFMain.Rank1Click(Sender: TObject);
+begin
+  FRank.show;
+end;
+
+end.

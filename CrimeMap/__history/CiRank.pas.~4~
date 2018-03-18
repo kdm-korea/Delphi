@@ -1,0 +1,72 @@
+unit CiRank;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Menus, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.Buttons,
+  Vcl.ComCtrls, Vcl.Mask, Data.Win.ADODB;
+
+type
+  TFRank = class(TForm)
+    GroupBox1: TGroupBox;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    BitBtn2: TBitBtn;
+    BitBtn3: TBitBtn;
+    BitBtn4: TBitBtn;
+    BitBtn5: TBitBtn;
+    BitBtn1: TBitBtn;
+    DBNavigator1: TDBNavigator;
+    BitBtn6: TBitBtn;
+    GroupBox2: TGroupBox;
+    Button8: TButton;
+    ComboBox1: TComboBox;
+    DBGrid1: TDBGrid;
+    MainMenu1: TMainMenu;
+    ddd1: TMenuItem;
+    N2: TMenuItem;
+    DevelopmentInfo1: TMenuItem;
+    ProgramInfo1: TMenuItem;
+    MapSetting1: TMenuItem;
+    ProgramSetting1: TMenuItem;
+    ADOTable1: TADOTable;
+    DataSource1: TDataSource;
+    RadioButton1: TRadioButton;
+    RadioButton2: TRadioButton;
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    procedure BitBtn4Click(Sender: TObject);
+    procedure Button8Click(Sender: TObject);
+
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FRank: TFRank;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFRank.BitBtn4Click(Sender: TObject);
+begin
+  ADOTable1.Insert;
+end;
+
+procedure TFRank.Button8Click(Sender: TObject);
+var
+  Sh: string;
+begin
+  if(RadioButton1.Enabled = True) then
+
+end;
+
+end.

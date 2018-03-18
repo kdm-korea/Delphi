@@ -1,0 +1,373 @@
+object Form5: TForm5
+  Left = 0
+  Top = 0
+  Caption = 'Product Output'
+  ClientHeight = 320
+  ClientWidth = 714
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  ShowHint = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = -1
+    Width = 201
+    Height = 306
+    Caption = 'Rank Management'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    object Label2: TLabel
+      Left = 11
+      Top = 84
+      Width = 60
+      Height = 16
+      Caption = #52636#44256#49324#48264
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 11
+      Top = 28
+      Width = 60
+      Height = 16
+      Caption = #51228#54408#53076#46300
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 11
+      Top = 57
+      Width = 58
+      Height = 16
+      Caption = #44060'       '#49688
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label1: TLabel
+      Left = 11
+      Top = 116
+      Width = 60
+      Height = 16
+      Caption = #52636#44256#51068#51088
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object BitBtn2: TBitBtn
+      Left = 11
+      Top = 267
+      Width = 75
+      Height = 27
+      Caption = 'Delete'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Kind = bkCancel
+      NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 0
+      OnClick = BitBtn2Click
+    end
+    object BitBtn3: TBitBtn
+      Left = 11
+      Top = 225
+      Width = 75
+      Height = 27
+      Caption = 'Refresh'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Kind = bkRetry
+      NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 1
+      OnClick = BitBtn3Click
+    end
+    object BitBtn4: TBitBtn
+      Left = 13
+      Top = 186
+      Width = 75
+      Height = 27
+      Caption = '&Insert'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Kind = bkAll
+      NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 2
+      OnClick = BitBtn4Click
+    end
+    object BitBtn5: TBitBtn
+      Left = 115
+      Top = 225
+      Width = 75
+      Height = 27
+      Caption = '&Cancel'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Kind = bkIgnore
+      NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 3
+      OnClick = BitBtn5Click
+    end
+    object BitBtn1: TBitBtn
+      Left = 115
+      Top = 186
+      Width = 75
+      Height = 27
+      Caption = '&Save'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Kind = bkOK
+      NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 4
+      OnClick = BitBtn1Click
+    end
+    object DBNavigator1: TDBNavigator
+      Left = 13
+      Top = 148
+      Width = 176
+      Height = 25
+      DataSource = DataSource1
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 5
+    end
+    object BitBtn6: TBitBtn
+      Left = 115
+      Top = 267
+      Width = 75
+      Height = 27
+      Caption = '&Exit'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Kind = bkClose
+      NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 6
+    end
+    object DBEdit1: TDBEdit
+      Left = 77
+      Top = 23
+      Width = 121
+      Height = 26
+      DataField = 'PROCODE'
+      DataSource = DataSource1
+      TabOrder = 7
+    end
+    object DBEdit2: TDBEdit
+      Left = 77
+      Top = 52
+      Width = 121
+      Height = 26
+      DataField = 'QUANTITY'
+      DataSource = DataSource1
+      TabOrder = 8
+    end
+    object DBEdit3: TDBEdit
+      Left = 77
+      Top = 81
+      Width = 121
+      Height = 26
+      DataField = 'EM_NO'
+      DataSource = DataSource1
+      TabOrder = 9
+    end
+    object DBEdit4: TDBEdit
+      Left = 77
+      Top = 111
+      Width = 121
+      Height = 26
+      DataField = 'OUTDATE'
+      DataSource = DataSource1
+      TabOrder = 10
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 214
+    Top = 0
+    Width = 491
+    Height = 52
+    Caption = 'Search && Sort'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+    object Button8: TButton
+      Left = 112
+      Top = 18
+      Width = 57
+      Height = 25
+      Caption = 'Sort'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      OnClick = Button8Click
+    end
+    object ComboBox1: TComboBox
+      Left = 3
+      Top = 19
+      Width = 103
+      Height = 24
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+      Text = 'Sort'
+      Items.Strings = (
+        'Ascending'
+        'Descending')
+    end
+    object Edit1: TEdit
+      Left = 305
+      Top = 17
+      Width = 112
+      Height = 26
+      TabOrder = 2
+    end
+    object ComboBox2: TComboBox
+      Left = 176
+      Top = 16
+      Width = 123
+      Height = 26
+      TabOrder = 3
+      Text = 'Kind'
+      Items.Strings = (
+        'Procode'
+        'Em_no')
+    end
+    object Button1: TButton
+      Left = 423
+      Top = 17
+      Width = 57
+      Height = 25
+      Caption = 'Find'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 4
+      OnClick = Button1Click
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 212
+    Top = 58
+    Width = 493
+    Height = 247
+    DataSource = DataSource1
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Options = [dgAlwaysShowEditor, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    ParentFont = False
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object MainMenu1: TMainMenu
+    Left = 743
+    Top = 65
+    object ddd1: TMenuItem
+      Caption = '&Setting'
+      object MapSetting1: TMenuItem
+        Caption = '&Map Setting'
+        OnClick = MapSetting1Click
+      end
+      object ProgramSetting1: TMenuItem
+        Caption = '&Program Setting'
+      end
+    end
+    object N2: TMenuItem
+      Caption = '&Help'
+      object DevelopmentInfo1: TMenuItem
+        Caption = '&Development Info'
+        OnClick = DevelopmentInfo1Click
+      end
+      object ProgramInfo1: TMenuItem
+        Caption = '&Program Info'
+        OnClick = ProgramInfo1Click
+      end
+    end
+  end
+  object ADOQuery1: TADOQuery
+    Active = True
+    ConnectionString = 
+      'Provider=MSDASQL.1;Password=user18c;Persist Security Info=True;U' +
+      'ser ID=user18c;Data Source=CiDB'
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * from DBDIOUTPUT;')
+    Left = 744
+    Top = 120
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOQuery1
+    Left = 744
+    Top = 176
+  end
+end

@@ -1,0 +1,58 @@
+unit Input;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Menus, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.Buttons,
+  Vcl.ComCtrls;
+
+type
+  TFDepartment = class(TForm)
+    GroupBox1: TGroupBox;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    BitBtn2: TBitBtn;
+    BitBtn3: TBitBtn;
+    BitBtn4: TBitBtn;
+    BitBtn5: TBitBtn;
+    BitBtn1: TBitBtn;
+    DBNavigator1: TDBNavigator;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    BitBtn6: TBitBtn;
+    GroupBox2: TGroupBox;
+    Button8: TButton;
+    GroupBox3: TGroupBox;
+    RadioButton1: TRadioButton;
+    RadioButton2: TRadioButton;
+    Edit1: TEdit;
+    Button10: TButton;
+    ComboBox1: TComboBox;
+    DBGrid1: TDBGrid;
+    MainMenu1: TMainMenu;
+    ddd1: TMenuItem;
+    N2: TMenuItem;
+    DateTimePicker1: TDateTimePicker;
+    DevelopmentInfo1: TMenuItem;
+    ProgramInfo1: TMenuItem;
+    MapSetting1: TMenuItem;
+    ProgramSetting1: TMenuItem;
+
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FDepartment: TFDepartment;
+
+implementation
+
+{$R *.dfm}
+
+end.

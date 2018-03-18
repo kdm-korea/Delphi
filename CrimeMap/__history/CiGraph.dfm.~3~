@@ -1,0 +1,48 @@
+object FGraph: TFGraph
+  Left = 0
+  Top = 0
+  Caption = 'Graph'
+  ClientHeight = 418
+  ClientWidth = 980
+  Color = clBtnFace
+  DragKind = dkDock
+  DragMode = dmAutomatic
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBChart1: TDBChart
+    Left = 0
+    Top = 0
+    Width = 980
+    Height = 418
+    Title.Text.Strings = (
+      'TDBChart')
+    View3D = False
+    Align = alClient
+    TabOrder = 0
+    ExplicitLeft = 580
+    ExplicitWidth = 418
+    ExplicitHeight = 400
+    DefaultCanvas = 'TGDIPlusCanvas'
+    ColorPaletteIndex = 7
+    object Series1: TFastLineSeries
+      LinePen.Color = 6724095
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+  end
+  object ADOTable1: TADOTable
+    ConnectionString = 
+      'Provider=MSDASQL.1;Password=user18c;Persist Security Info=True;U' +
+      'ser ID=user18c;Data Source=CiDB'
+    Left = 24
+    Top = 16
+  end
+end

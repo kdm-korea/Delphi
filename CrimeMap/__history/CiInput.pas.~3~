@@ -1,0 +1,77 @@
+unit CiInput;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Data.Win.ADODB, Vcl.Menus,
+  Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls, Vcl.ExtCtrls,
+  Vcl.Buttons;
+
+type
+  TForm4 = class(TForm)
+    GroupBox1: TGroupBox;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    BitBtn2: TBitBtn;
+    BitBtn3: TBitBtn;
+    BitBtn4: TBitBtn;
+    BitBtn5: TBitBtn;
+    BitBtn1: TBitBtn;
+    DBNavigator1: TDBNavigator;
+    BitBtn6: TBitBtn;
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    GroupBox2: TGroupBox;
+    Button8: TButton;
+    ComboBox1: TComboBox;
+    DBGrid1: TDBGrid;
+    MainMenu1: TMainMenu;
+    ddd1: TMenuItem;
+    MapSetting1: TMenuItem;
+    ProgramSetting1: TMenuItem;
+    N2: TMenuItem;
+    DevelopmentInfo1: TMenuItem;
+    ProgramInfo1: TMenuItem;
+    ADOQuery1: TADOQuery;
+    DataSource1: TDataSource;
+    Edit1: TEdit;
+    ComboBox2: TComboBox;
+    Button1: TButton;
+    Label1: TLabel;
+    DBEdit4: TDBEdit;
+    procedure Button8Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm4.Button8Click(Sender: TObject);
+var
+  i:string;
+begin
+  if(ComboBox1.Text = 'Ascending')then
+    i := 'Asc'
+  else if(ComboBox1.Text = 'Descending')then
+    i := 'Desc';
+  with ADOQuery1 do
+  begin
+    close;
+    SQL.Clear;
+    SQL.Add('Select * From DBDIINPUT order by Indate '+i+';');
+    Open;
+  end;
+
+end;
+
+end.

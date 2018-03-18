@@ -1,0 +1,8 @@
+
+ TWebBrowser 웹브라우져 최신버전 열기
+  http://tech.devgear.co.kr/delphi_qna/431242
+  https://www.delmadang.com/community/bbs_view.asp?bbsNo=3&bbsCat=0&indx=448575&page=1
+
+ 리스트 뷰로 뿌리기
+  D:\201707_Delphi\201612_FireMonkey_mobile\201612_FireMonkey_mobile\ListViewDynamicAppearance\Win32
+

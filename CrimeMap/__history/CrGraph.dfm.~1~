@@ -1,0 +1,95 @@
+object CiGraph: TCiGraph
+  Left = 0
+  Top = 0
+  Caption = 'Graph'
+  ClientHeight = 418
+  ClientWidth = 980
+  Color = clBtnFace
+  DragKind = dkDock
+  DragMode = dmAutomatic
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ListView1: TListView
+    Left = 552
+    Top = 152
+    Width = 250
+    Height = 150
+    Columns = <>
+    Items.ItemData = {}
+    TabOrder = 0
+  end
+  object ListBox1: TListBox
+    Left = 368
+    Top = 152
+    Width = 121
+    Height = 97
+    ItemHeight = 13
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5')
+    TabOrder = 1
+  end
+  object CheckListBox1: TCheckListBox
+    Left = 328
+    Top = 184
+    Width = 121
+    Height = 97
+    ItemHeight = 13
+    Items.Strings = (
+      '1'
+      '2'
+      '2'
+      '3'
+      '4')
+    TabOrder = 2
+  end
+  object ColorListBox1: TColorListBox
+    Left = 256
+    Top = 96
+    Width = 121
+    Height = 97
+    TabOrder = 3
+  end
+  object ButtonGroup1: TButtonGroup
+    Left = 792
+    Top = 152
+    Items = <>
+    TabOrder = 5
+  end
+  object FlowPanel1: TFlowPanel
+    Left = 664
+    Top = 96
+    Width = 185
+    Height = 41
+    Caption = 'FlowPanel1'
+    TabOrder = 4
+  end
+  object ListView2: TListView
+    Left = 400
+    Top = 43
+    Width = 250
+    Height = 150
+    Columns = <
+      item
+      end
+      item
+      end
+      item
+      end>
+    Items.ItemData = {}
+    TabOrder = 6
+  end
+  object ChartDataSet1: TChartDataSet
+    Left = 48
+    Top = 32
+  end
+end
